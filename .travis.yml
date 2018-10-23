@@ -1,5 +1,6 @@
 sudo: false
 language: python
+dist: xenial
 cache: pip
 python:
   - "3.5"
@@ -9,7 +10,6 @@ python:
   - "pypy3"
 install: pip install -U $DEPS 'pytest<3.7' pytest-asyncio pytest-xdist flaky structlog
 script: pytest
-dist: xenial
 env:
   global:
     # github
